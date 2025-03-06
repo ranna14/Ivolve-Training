@@ -45,5 +45,5 @@ sudo apt update
 sudo apt install nginx
 ```
 ### output 
-![install nginx](https://github.com/user-attachments/assets/d19c8a81-a011-48f8-8ce4-18ddd020e3e0)
+![install nginx](https://github.com/user-attachments/assets/ac63ec94-6800-4840-a5b7-7cb9c78cc69c)
 
