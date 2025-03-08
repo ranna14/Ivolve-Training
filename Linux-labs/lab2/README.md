@@ -15,7 +15,7 @@ sudo systemctl enable mysql
 ### Step 2: Create the Backup Script
 Create a backup script:
 ```bash
- sudo nano /mysql_daily_backup.sh
+ sudo vim backup.sh
 ```
 ```bash
 #!/bin/bash 
@@ -50,7 +50,7 @@ find "$BACKUP_DIR" -type f -name "*.sql.gz" -mtime +7 -exec rm {} \;
 ```
 ### Step 3: Make the Script Executable
 ```bash
-chmod +x mysql_daily_backup.sh
+chmod +x backup.sh
 ```
 ### Step 4: Schedule with Cron
 1-Open the crontab editor:
@@ -59,7 +59,7 @@ crontab -e
 ```
 2-Add the following line to schedule the script to run daily at 5:00 PM:
 ```bash
-0 17 * * * /home/user/mysql_daily_backup.sh >> /var/log/mysql_backup.log 2>&1
+0 17 * * * /home/user/backup.sh >> /var/log/mysql_backup.log 2>&1
 ```
 ## Verification
 ### Test the Script Manually:
