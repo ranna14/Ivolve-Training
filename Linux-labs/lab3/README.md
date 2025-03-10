@@ -37,3 +37,4 @@ chmod +x ping_servers.sh
 ./ping_servers.sh
 ```
 ### output 
+"D:\Ivolve-training\Linux-labs\lab3\ping.jpeg"
