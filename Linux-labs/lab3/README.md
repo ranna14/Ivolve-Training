@@ -20,8 +20,8 @@ Displays a message indicating whether the server is up and running or unreachabl
 # Loop through the IP range 172.16.17.0 to 172.16.17.255
 for i in 172.16.17.{0..255}
 do
-ping -c 1 -w 1 172.16.17.$i > /usr/share/man/man4/null.4.gz
-if [ $? -eq 0 ]; then
+if ping -c 1 -w 1 172.16.17.$i > /usr/share/man/man4/null.4.gz
+then
   echo "Server 172.16.17.$i is up and running"
 else
   echo "Server 172.16.17.$i is unreachable"
